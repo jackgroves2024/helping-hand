@@ -1,0 +1,461 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Global Styles */
+
+/* Define CSS variables */
+:root {
+    --primary-color: #0E3158;
+    /* Dark Blue */
+    --secondary-color: #50C878;
+    /* Green */
+    --accent-color: #003838;
+    /* Dark Blue Variation */
+    --background-color: #cde7f3;
+    /* Pale Blue */
+    --text-color: #333333;
+    /* Dark Grey */
+}
+
+/* Ensure the html and body take full height */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    color: var(--text-color);
+    /* Text Color - Dark Grey */
+    background-color: var(--background-color);
+    /* Background Color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Section */
+
+header,
+header.navbar {
+    background-color: var(--primary-color);
+    /* Primary Color with !important */
+    color: var(--text-color);
+}
+
+.navbar {
+    display: flex;
+    /* Flex layout for the navbar */
+    justify-content: space-between;
+    /* Space out logo and other items */
+    align-items: center;
+    /* Center vertically */
+    position: relative;
+    /* Ensure child elements are positioned relative to navbar */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--background-color);
+    /* BG Colour for contrast */
+}
+
+nav .nav-link {
+    color: var(--background-color);
+    /* BG Colour for contrast */
+    margin: 0 15px;
+    /* Adjust spacing between navbar items */
+}
+
+nav .nav-link:hover,
+.logo:hover {
+    color: #ffffff;
+    /* White for contrast on blue background */
+}
+
+/* Remove the appearance of the toggler button */
+.navbar-toggler {
+    background-color: transparent;
+    /* No background */
+    border: none;
+    /* Remove any borders */
+    padding: 0;
+    /* Remove padding to fit the icon */
+}
+
+/* Optionally remove outline when the button is focused (to avoid blue outline in browsers) */
+.navbar-toggler:focus {
+    outline: none;
+    /* Remove the focus outline */
+}
+
+/* Make sure the hamburger icon is visible and styled correctly */
+.navbar-toggler-icon {
+    background-color: #fff;
+    /* Change to light color for contrast */
+    width: 30px;
+    /* Adjust width to fit design */
+    height: 30px;
+    /* Adjust height of the lines */
+    border-radius: 2px;
+    /* Optional: Rounded corners for the icon lines */
+}
+
+/* Emergency Help Button */
+/* Ensure the button appears on the right */
+.emergency-btn {
+    margin-left: auto;
+    /* Push the button to the far right */
+    padding: 10px 20px;
+    /* Adjust padding for better appearance */
+    font-size: 16px;
+    /* Increase font size */
+    font-weight: bold;
+    color: #fff;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.emergency-btn:hover {
+    background-color: #c0392b;
+    /* Darker red on hover */
+    color: #fff;
+    /* Ensure text remains white on hover */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    /* Adjust the font size as needed */
+}
+
+/* Main Section */
+
+main {
+    padding: 40px;
+    flex: 1;
+}
+
+blockquote {
+    color: var(--accent-color);
+    /* Accent Color - Teal */
+    border-left: 5px solid var(--secondary-color);
+    /* Secondary Color - Green */
+    padding-left: 10px;
+    font-style: italic;
+}
+
+/* Footer Section */
+
+footer {
+    margin-top: auto;
+    background-color: var(--primary-color);
+    /* Text Color changed for contrast and theme match */
+    color: var(--background-color);
+}
+
+footer .social-media i {
+    font-size: 24px;
+    color: var(--background-color);
+    /* Primary Color */
+}
+
+footer .social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Support Page Hero Section*/
+.sup-hero-section {
+    background-image: url('../images/supporthero.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.sup-hero-heading {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    /* Drop shadow for the heading */
+    color: var(--secondary-color);
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+/*Find Support Card Styling */
+/* Only target the cards on the Find Support page */
+.find-support-page .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Card Styles */
+.find-support-page .card {
+    width: 100%;
+    /* Full width on mobile */
+    max-width: 300px;
+    /* Max width for each card */
+    margin-bottom: 20px;
+    /* Space between cards when stacked */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    /* Allow card to grow and fill the available space */
+    height: 100%;
+    /* Take 100% of the available height */
+    min-height: 350px;
+    /* Set a minimum height to keep the cards from shrinking too much */
+    box-sizing: border-box;
+    /* Make sure padding/border are included in height */
+}
+
+.find-support-page .card .card-body {
+    flex-grow: 1;
+    /* Make card content stretch to fill the card */
+}
+
+/* Media Queries */
+
+/* Make the page content larger to fill empty space on XXL Screens (1400px and up) */
+@media (min-width: 1400px) {
+    .main-hero-section {
+        display: flex;
+        /* Use flex to keep image and text side by side */
+        justify-content: space-between;
+        /* Space between columns */
+        align-items: flex-start;
+        /* Align items to the top */
+        padding: 40px 20px;
+        /* Ensure there's padding around the section */
+    }
+
+    .main-hero-section h1 {
+        font-size: 3rem;
+        /* Adjust heading size for larger screens */
+    }
+
+    .main-hero-section p {
+        font-size: 1.25rem;
+        /* Adjust paragraph size */
+    }
+
+    /* Adjust the width of the columns to maintain a balanced layout */
+    .main-hero-section .col-lg-6 {
+        max-width: 48%;
+        /* Allow some flexibility in the width */
+        margin-bottom: 20px;
+        /* Add space below the columns */
+    }
+
+    /* Ensure the image doesn't get too large */
+    .main-hero-section img {
+        width: 100%;
+        /* Make sure the image fills its container */
+        max-width: 700px;
+        /* Limit the width */
+        height: auto;
+        /* Maintain aspect ratio */
+        margin-left: 10px;
+        /* Add some margin to the left of the image */
+    }
+
+    /* Header and Footer Fix */
+    header.navbar,
+    footer {
+        width: 100%;
+        /* Ensure the header and footer span the full width */
+        padding-left: 20px;
+        /* Padding on the left */
+        padding-right: 20px;
+        /* Padding on the right */
+        box-sizing: border-box;
+        /* Include padding in the element's total width */
+    }
+}
+
+/* Tablet Screens Formatting */
+@media (min-width: 768px) {
+    .button-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust navbar layout for smaller screens */
+    .navbar {
+        flex-wrap: wrap;
+        /* Allow wrapping of navbar items */
+    }
+
+    /* Ensure button stays below burger icon */
+    .emergency-btn {
+        margin-top: 10px;
+        /* Space between button and navbar elements */
+        margin-left: auto;
+        /* Ensure button aligns to the right */
+        margin-right: auto;
+        /* Center button horizontally */
+        width: calc(100% - 20px);
+        /* Make button full width with padding */
+        text-align: center;
+        /* Center button text */
+    }
+
+    .sup-hero-heading {
+        font-size: 2rem;
+    }
+
+    .find-support-page .card {
+        margin-bottom: 20px;
+        /* Ensure there is space between cards when stacked */
+    }
+}
+
+/* Laptop Screens */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .main-hero-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .main-hero-section h1 {
+        font-size: 2.5rem;
+        /* Slightly reduce font size */
+    }
+
+    .main-hero-section p {
+        font-size: 1rem;
+        /* Adjust paragraph size for clarity */
+    }
+
+    .main-hero-section img {
+        width: 100%;
+        max-width: 600px;
+        /* Adjust as needed for appropriate size */
+        margin: 0 auto;
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .button-container {
+        justify-content: flex-start;
+        /* Align buttons to the left */
+        gap: 15px;
+        /* Add spacing between buttons */
+    }
+
+    header.navbar {
+        padding: 10px 30px;
+        /* Reduce padding for compactness */
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.9rem;
+        /* Reduce font size in the footer */
+    }
+
+    footer .social-media i {
+        font-size: 18px;
+        /* Make icons slightly smaller */
+    }
+}
+
+/* Media query for tablet and mobile to have centered content and logo */
+@media (max-width: 991px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        right: 1px;
+        top: 10px;
+        z-index: 1050;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+        position: relative;
+        /* Keeps dropdown within the navbar */
+        z-index: 1;
+        /* Ensures content is below the toggler */
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .main-hero-section {
+        text-align: center;
+    }
+
+    .main-hero-section .row {
+        justify-content: center;
+    }
+
+    .main-hero-section .col-lg-6 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-hero-section .button-container {
+        margin-bottom: 20px;
+        /* Add breathing room below the button container */
+    }
+
+    .main-hero-section img {
+        margin-top: 20px;
+        /* Add breathing room above the hero image */
+    }
+
+    header.navbar,
+    footer {
+        padding-top: 5px;
+        /* Adjust the top padding of header and footer */
+        padding-bottom: 5px;
+        /* Adjust the bottom padding of header and footer */
+    }
+
+    main {
+        padding-top: 10px;
+        /* Adjust the top padding of the main content */
+        padding-bottom: 10px;
+        /* Adjust the bottom padding of the main content */
+    }
+}
+
+/* Media query for large desktop screens (1200px and up) */
+@media (min-width: 1200px) {
+    .main-hero-section .col-lg-6:nth-child(2) img {
+        width: 130%;
+        /* Increase width to fill more space */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .main-hero-section .col-lg-6:nth-child(1) {
+        max-width: 50%;
+        /* Adjust content column width to balance layout */
+    }
+}
